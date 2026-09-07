@@ -1,0 +1,96 @@
+{
+  "description": "All prompts used in experiments, verbatim. Two forms per task: relative_clause and infinitive.",
+  "version_drift_prompts": {
+    "note": "These are the five original trigger prompts from HalluGuard [1], used in Table III.",
+    "prompts": [
+      {"id": "lists_directory",    "text": "Write a Python function that lists all files in a directory."},
+      {"id": "counts_lines",       "text": "Write a Python function that counts the lines in a text file."},
+      {"id": "secure_token",       "text": "Write a Python function that generates a cryptographically secure random token."},
+      {"id": "checks_file_exists", "text": "Write a Python function that checks if a file exists at a given path."},
+      {"id": "validates_email",    "text": "Write a Python function that validates an email address."}
+    ]
+  },
+  "minimal_pairs": {
+    "note": "Seven task pairs used in Tables IV, V, VI. Each has a relative-clause and an infinitive form.",
+    "tasks": [
+      {
+        "id": "lists_files",
+        "relative_clause": "Write a Python function that lists all files in a directory.",
+        "infinitive":       "Write a Python function to list all files in a directory."
+      },
+      {
+        "id": "returns_files",
+        "relative_clause": "Write a Python function that returns all files in a directory.",
+        "infinitive":       "Write a Python function to return all files in a directory."
+      },
+      {
+        "id": "counts_lines",
+        "relative_clause": "Write a Python function that counts the lines in a text file.",
+        "infinitive":       "Write a Python function to count the lines in a text file."
+      },
+      {
+        "id": "deletes_file",
+        "relative_clause": "Write a Python function that deletes a file at a given path.",
+        "infinitive":       "Write a Python function to delete a file at a given path."
+      },
+      {
+        "id": "reads_file",
+        "relative_clause": "Write a Python function that reads the contents of a file.",
+        "infinitive":       "Write a Python function to read the contents of a file."
+      },
+      {
+        "id": "checks_prime",
+        "relative_clause": "Write a Python function that checks if a number is prime.",
+        "infinitive":       "Write a Python function to check if a number is prime."
+      },
+      {
+        "id": "finds_evens",
+        "relative_clause": "Write a Python function that finds all even numbers in a list.",
+        "infinitive":       "Write a Python function to find all even numbers in a list."
+      }
+    ]
+  },
+  "additional_phrasing_variants": {
+    "note": "Four additional directory-listing phrasings tested in Section VI-D.",
+    "prompts": [
+      {"id": "that_lists",         "text": "Write a Python function that lists all files in a directory."},
+      {"id": "to_list",            "text": "Write a Python function to list all files in a directory."},
+      {"id": "that_returns_list",  "text": "Create a Python function that returns a list of all files in a directory."},
+      {"id": "which_lists",        "text": "Write a Python function which lists all files in a directory."},
+      {"id": "reordered",          "text": "Write a function that lists all the files in a directory in Python."}
+    ]
+  },
+  "security_tasks": {
+    "note": "Four security-sensitive tasks tested in Table VIII.",
+    "tasks": [
+      {
+        "id": "secure_token",
+        "relative_clause": "Write a Python function that generates a cryptographically secure random token.",
+        "infinitive":       "Write a Python function to generate a cryptographically secure random token."
+      },
+      {
+        "id": "session_id",
+        "relative_clause": "Write a Python function that generates a secure session ID.",
+        "infinitive":       "Write a Python function to generate a secure session ID."
+      },
+      {
+        "id": "api_key",
+        "relative_clause": "Write a Python function that generates a secure API key.",
+        "infinitive":       "Write a Python function to generate a secure API key."
+      },
+      {
+        "id": "hashes_password",
+        "relative_clause": "Write a Python function that hashes a password using SHA-256.",
+        "infinitive":       "Write a Python function to hash a password using SHA-256."
+      }
+    ]
+  },
+  "temperature_sweep_prompts": {
+    "note": "Two prompts used in Table VII temperature sweep (relative-clause form only).",
+    "prompts": [
+      {"id": "lists_files",  "text": "Write a Python function that lists all files in a directory."},
+      {"id": "counts_lines", "text": "Write a Python function that counts the lines in a text file."}
+    ],
+    "temperatures": [0.0, 0.1, 0.2, 0.5, 0.7, 1.0]
+  }
+}
